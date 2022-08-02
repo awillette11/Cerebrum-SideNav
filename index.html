@@ -36,46 +36,35 @@
 </head>
 <body>
     
-<div class="wrapper">
 
- <nav class="sidebar">
-
-
+<div class="sidebar">
+    <div class="wrapper">
 
 <!-- SIDEBAR HEADER -->
 
-
     <div class="sidebar-header">
 
-        <div class="logo-icon">
-            <img src="icons/fa-brain.svg" class="fa-brain" alt="">
-        </div>
-
+        <img src="icons/fa-brain.svg" class="logo-icon" alt="">
         <div class="logo-text collapse">
-            <h1>Cerebrum</h1>
-            <p class="slogan">Health is Wealth</p>
+            <p class="logo-text">Cerebrum</p>
+            <h3 class="slogan">Health is Wealth</h3>
         </div>
-
-        <div class="collapse-arrow">
-            <img src="icons/right-arrow.svg" alt="" class="right-arrow">
-        </div>
-        
+        <img src="icons/right-arrow.svg" alt="" class="right-arrow">
+  
     </div>
 
 
 <!-- MAIN NAV --------------------->
 
 
-    <div class="nav">
-
-        <h3>MENU</h3>
+    <nav class="top">
+        <h3 class="subheading">MENU</h3>
 
         <ul class="nav-items">
 
-
-            <li class="nav-link active-link">
+            <li class="nav-link active">
                 <a href="">
-                    <img src="icons/solid-puzzle.svg" alt="" class="nav-icon">
+                    <img src="/icons/puzzle.svg" alt="" class="nav-icon">
                     <h2 class="collapse">Activity</h2>
                 </a>
             </li>
@@ -116,16 +105,14 @@
             </li>
 
         </ul>
-    </div>
-
+    </nav>
 
 
 <!-- SECONDARY NAV -->
 
 
-       <div class="account-nav">
-
-        <h3>ACCOUNT</h3>
+    <nav class="bottom">
+        <h3 class="subheading">ACCOUNT</h3>
 
         <ul class="nav-items">
 
@@ -157,45 +144,39 @@
                 </a>
             </li>
 
-
         </ul>
-    </div>
+    </nav>
 
 
 <!-- Profile -------------------------------------->
 
 
-<footer>
+    <footer>
+        <div class="profile-container">
 
-    <div class="profile-container">
-
-        <div class="img-container">
             <img src="icons/avatar.png" alt="" class="avatar">
+            <div class="profile-copy collapse">
+                <h3 class="name"> Kevin Mhoon</h3>
+                <h4 class="email">kmhoon@gmail.com</h4>
+            </div>
+            <img src="icons/logout.svg" alt="" class="nav-icon collapse-text">
+
         </div>
 
-        <div class="col-2 collapse">
-            <h4 class="name"> Kevin Mhoon</h4>
-            <p class="email">kmhoon@gmail.com</p>
-        </div>
-
-    </div>
-
-      
-    <div class="toggle-container">
-
-            <img src="icons/toggle.png" alt="" class="darkmode-toggle">
+        
+        <div class="darkmode-container">
+            <img src="icons/toggle.png" alt="" class="darkmode-icon">
             <h2 class="collapse">Dark Mode</h2>
+        </div>
+
+    </footer>
+
+
+
 
     </div>
+</nav>
 
-</footer>
-
-
-
-
-
-    </nav>
-</div>
 
 </body>
 </html>

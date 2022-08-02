@@ -26,66 +26,57 @@ body {
 
 /**** Logo ***********/
 
-h1 {
+.logo-text {
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: .1rem;
     font-family: 'Noto Serif Display', serif;
-    color: #141414;
+    color: #333;
 }
-
 
 /**** Slogan ***********/
 
 .slogan {
-
-    font-size: 1.4rem;
-    line-height: 1.4rem;
-    color: #333;
+    line-height: 1.8rem;
     font-weight: 400;
     letter-spacing: .1rem;
+    font-family: 'Poppins', sans-serif;
 }
 
-
-/**** Nav Item ***********/
 
 h2 {
     font-size: 1.6rem;
     font-weight: 400;
-    color: #141414;
     line-height: 2.8rem;
 }
-
-/**** Menu Header  ********/
 
 
 h3 { 
     font-size: 1.4rem;
     line-height: 2.4rem;
-    color: #4e4e4e;
     font-weight: 500;
-    margin-bottom: 2rem;
-    letter-spacing: .1rem;
+
 } 
 
 
-
 h4 {
-    font-size: 1.4rem;
-    color: #333;
-    letter-spacing: 0;
-    line-height: 1.4rem;
-    font-weight: 500;
-}
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 300;
 
+}
 
 
 /**** SIDEBAR HEADER HERE  ***************************************/
 
+.wrapper {
+    width: 100%;
+    align-items: center;
+}
 
 .sidebar {
     position: relative;
-    padding: 3.2rem;
+    padding: 3.8rem;
     width: 28rem;
     height: 100vh;
     background-color: rgb(255, 255, 255);
@@ -99,29 +90,27 @@ h4 {
     display: flex;
     margin-bottom: 6rem;  
     align-items: center;
+    width: 24rem;
     height: auto;
+    margin-left: -1.8rem;
+
 }
 
 
-.fa-brain {
+.logo-icon {
     margin-right: 1.2rem; 
     height: 3.6rem;
     width: auto;
 }
 
 
-.logo-icon {
-   display: flex;
-}
-
-
 .right-arrow {
-    border-radius: 50%;
     position: absolute;
-    right: -5rem;
-    align-items: center;
-    top: 0;
+    height: 3.6rem;
+    width: 3.6rem;
+    right: -16%;
     cursor: pointer;
+    border-radius: 50%;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
 }
 
@@ -129,61 +118,53 @@ h4 {
 
 /**** SIDEBAR STARTS HERE  ***************************************/
 
-
-.nav-link {
-    margin-bottom: 1.8rem;
-    position: relative;
-    align-items: center;
-    margin-left: 1.2rem;
+.subheading {
+    margin-bottom: 2.4rem;
+    letter-spacing: .1rem;
 }
 
 
-.active-link::before {
+.active::before {
     content: "";
     position: absolute;
     top: -1rem;
-    left: -2rem;
+    left: -1.8rem;
     width: 24rem;
     height: 4.8rem;
     align-items: center;
     justify-content: center;
     border-radius: .4rem;
-    background: linear-gradient(271.28deg, rgba(226, 226, 226, 0.4) 0%, rgba(227, 227, 227, 0.204) 125.87%);
-    z-index: -2;
+    background-color: #dbdbdb47;
+    z-index: -1;
 }
 
 
-.active-link h2 {
-   color: #333;
-   font-weight: 500;
+.nav-link {
+    margin-bottom: 1.8rem;
+    position: relative;
+    align-items: center;
 }
 
 
-.active-link .nav-icon {
+.nav-icon {
+    margin-right: 1.2rem;
     width: 2rem;
     height: 2rem;
-    transform: rotate(-10deg);
+    align-items: center;
 }
 
 
 .nav-link > a {
   display: flex;
   text-decoration: none;
+  color: #333;
   align-items: center;
 }
 
 
-.nav-icon {
-    margin-right: 1.2rem;
-    color: #000;
-    width: 2rem;
-    height: 2rem;
-}
-
-
-.account-nav {
-    margin-top: 4rem;
-    padding-bottom: 2rem;
+.bottom {
+    margin: 6rem 0;
+ 
 }
 
 
@@ -202,40 +183,41 @@ footer {
 
 .profile-container {
     display: flex;
-    align-items: center;
-    height: auto;
     width: 24rem;
-    padding: 1.4rem;
-    background: linear-gradient(271.28deg, rgba(226, 226, 226, 0.4) 0%, rgba(227, 227, 227, 0.204) 125.87%);    border-radius: .2rem;
-    color: #333;
-    margin-left: -1rem;
-    cursor: pointer;
+    align-items: center;
+    padding: 1.2rem;
+    background-color: #333;
+    border-radius: .8rem;
+    margin-left: -1.8rem;
 }
 
 
-.email {
-    font-size: 1.2rem;
+.profile-copy {
+   color: #fff;
     line-height: 2rem;
+    margin-right: 2.4rem;
 }
 
 
 .avatar {
-    height: 3.2rem;
-    width: 3.2rem;
-    margin-right: 1.4rem;
+    height: 3.6rem;
+    width: 3.6rem;
+    margin-right: 1.2rem;
 }
 
 
-.toggle-container {
+.darkmode-container {
     display: flex;
     align-items: center;
-    padding-top: 2rem;
+    margin-top: 2rem;
+    cursor: pointer;
 }
 
-.darkmode-toggle {
+
+.darkmode-icon {
     height: 2.4rem;
     width: auto;
-    margin-right: 1.4rem;   
+    margin-right: 1.2rem;   
     cursor: pointer;
 }
 
@@ -249,10 +231,8 @@ footer {
     
 
 /******************************************************************/    
-/***** 1200 MEDIA QUERY STARTS HERE  ************************/
+/***** HEIGHT MEDIA QUERY STARTS HERE  ************************/
 /******************************************************************/
-    
-
 
 /******************************************************************/    
 /***** DESKTOP MEDIA QUERY STARTS HERE  ************************/
@@ -260,20 +240,13 @@ footer {
 
 
 
-@media only screen and (max-width: 14400px) {
+@media only screen and (max-width: 1440px) {
 
     html {
         font-size: 8px;  
     }
 
-    .sidebar-header {
-        display: flex;
-        margin-bottom: 5rem;   
-    }
 
-    .account-nav {
-        margin-top: 6rem;
-    }
 
     
     
