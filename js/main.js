@@ -1,17 +1,27 @@
+$(document).ready(function () {
+
+    
+    $("#right-arrow").click(function () {
+        $("#sidebar").toggleClass("close");
+    });
+    
+    $("#left-arrow").click(function () {
+        $("#sidebar").toggleClass("close");
+    });
 
 
+    $(".nav-link").click(function () {
+        $(".nav-link").removeClass("active");
+        $(this).addClass("active");
+    });
 
-(function () {
-    //===== Prealoder
+  
 
-    window.onload = function () {
-        window.setTimeout(fadeout, 400);
-    }
+    $(".darkmode-container").click(function () {
+        $("body").toggleClass("darkmode");
 
-    function fadeout() {
-        document.querySelector('.preloader').style.opacity = '0';
-        document.querySelector('.preloader').style.display = 'none';
-    }
+    });
 
+   
 
-})();
+});

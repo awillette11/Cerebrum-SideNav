@@ -15,26 +15,34 @@ body {
     line-height: 2.6rem;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    background: rgb(239, 239, 239); 
-    color: #333;
+    background-color: var(--white); 
+    color: var(--black);
+    transition: all 0.5s ease;
+}
+
+
+/**** COLOR ROOT HERE  ***************************************/
+
+:root {
+    --blackityBlack: #141414;
+    --black: #333;
+    --darkGray: #4F4F4F;
+    --white: #F2F2F2;
+    --snowWhite:#fff;
 }
 
 
 
 /**** FONT  ***************************************/
 
-
-/**** Logo ***********/
-
 .logo-text {
     font-size: 2rem;
     font-weight: 600;
     letter-spacing: .1rem;
     font-family: 'Noto Serif Display', serif;
-    color: #333;
+    color: var(--black);
 }
 
-/**** Slogan ***********/
 
 .slogan {
     line-height: 1.8rem;
@@ -67,19 +75,15 @@ h4 {
 
 /**** SIDEBAR HEADER HERE  ***************************************/
 
-.wrapper {
-    width: 100%;
-    align-items: center;
-}
-
 .sidebar {
     position: relative;
     padding: 3.8rem;
     width: 28rem;
     height: 100vh;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--snowWhite);
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.12);
     z-index: 2;
+    transition: all 0.5s ease;
 }
 
 
@@ -91,18 +95,20 @@ h4 {
     width: 24rem;
     height: auto;
     margin-left: -1.8rem;
-
+    white-space: nowrap;
+    transition: all 0.5s ease;
 }
 
 
 .logo-icon {
-    margin-right: 1.2rem; 
     height: 3.6rem;
     width: auto;
+    margin-right: 1.2rem; 
 }
 
 
-.right-arrow {
+#right-arrow, 
+#left-arrow {
     position: absolute;
     height: 3.6rem;
     width: 3.6rem;
@@ -110,30 +116,19 @@ h4 {
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+    transition: all 0.5s ease;
 }
 
 
+#left-arrow {
+    display: none;
+}
 
-/**** SIDEBAR STARTS HERE  ***************************************/
+/**** SIDEBAR NAV HERE  ***************************************/
 
-.subheading {
+.subheader {
     margin-bottom: 2.4rem;
     letter-spacing: .1rem;
-}
-
-
-.active::before {
-    content: "";
-    position: absolute;
-    top: -1rem;
-    left: -1.8rem;
-    width: 24rem;
-    height: 4.8rem;
-    align-items: center;
-    justify-content: center;
-    border-radius: .4rem;
-    background-color: #dbdbdb47;
-    z-index: -1;
 }
 
 
@@ -141,6 +136,7 @@ h4 {
     margin-bottom: 1.8rem;
     position: relative;
     align-items: center;
+    position: relative;
 }
 
 
@@ -155,20 +151,41 @@ h4 {
 .nav-link > a {
   display: flex;
   text-decoration: none;
-  color: #333;
+  color: var(--black);
   align-items: center;
+}
+
+
+.active::before {
+    content: "";
+    position: absolute;
+    top: -1rem;
+    left: -1.8rem;
+    width: 24rem;
+    height: 4.4rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: .8rem;
+    background-color: var(--white);
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+
+.collapse {
+    white-space: nowrap;
+    transition: all 0.5s ease;
 }
 
 
 .bottom {
     margin: 6rem 0;
- 
 }
 
 
 
 
-/**** FOOTER STARTS HERE  ***************************************/
+/**** SIDEBAR FOOTER HERE  ***************************************/
 
 footer {
     align-items: center;
@@ -184,9 +201,10 @@ footer {
     width: 24rem;
     align-items: center;
     padding: 1.2rem;
-    background-color: #333;
+    background-color: var(--black);
     border-radius: .8rem;
     margin-left: -1.8rem;
+    transition: all 0.5s ease;
 }
 
 
@@ -194,6 +212,8 @@ footer {
    color: #fff;
     line-height: 2rem;
     margin-right: 2.4rem;
+    white-space: nowrap;
+    transition: all 0.5s ease;
 }
 
 
@@ -209,6 +229,7 @@ footer {
     align-items: center;
     margin-top: 2rem;
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 
@@ -217,8 +238,124 @@ footer {
     width: auto;
     margin-right: 1.2rem;   
     cursor: pointer;
+    transition: all 0.5s ease;
 }
 
+
+
+/**** CLOSE NAV HERE  ***************************************/
+
+
+#sidebar.close {
+    padding: 4rem 1.6rem;
+    width: 9.2rem;
+    z-index: 2;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+
+#sidebar.close .sidebar-header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 0;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+ 
+
+#sidebar.close .logo-icon {
+     font-size: 4rem;
+     margin-right: 1.2rem;
+}
+
+
+#sidebar.close #right-arrow,
+#sidebar.close #left-arrow {
+    right: -40%;
+}
+
+
+#sidebar.close #left-arrow {
+    display: block;
+}
+
+
+#sidebar.close #right-arrow,
+#sidebar.close .collapse, 
+#sidebar.close .profile-container > .nav-icon  {
+    display: none;
+    transition: all 0.5s ease;
+}
+
+
+#sidebar.close nav {
+    text-align: center;
+}
+ 
+
+#sidebar.close .subheader {
+    transition: all 0.5s ease;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.5s ease;
+}
+
+
+#sidebar.close .nav-icon {
+    width: 100%;
+    height: 2.4rem;
+    align-items: center;
+    display: flex;
+    margin: 0;
+}
+ 
+
+#sidebar.close .profile-container,
+#sidebar.close .active::before {
+    width: 6.4rem;
+    margin-left: 0;
+    transition: all 0.5s ease;
+}
+
+
+#sidebar.close .darkmode-container {
+   margin-left: 1rem;
+   transition: all 0.5s ease;
+
+}
+
+
+/**** DARKMODE NAV HERE  ***************************************/
+
+body.darkmode .collapse,
+body.darkmode .subheader,
+body.darkmode .logo-text  {
+    color: var(--snowWhite);
+    transition: all 0.5s ease;
+}
+
+
+body.darkmode #sidebar {
+    background-color: var(--blackityBlack);
+    transition: all 0.5s ease;
+}
+
+
+body.darkmode, 
+body.darkmode .active::before {
+    background-color: var(--black);
+    transition: all 0.5s ease;
+}
+
+
+body.darkmode .lightmode-icon {
+    display: block;
+}
 
 
 
@@ -228,9 +365,6 @@ footer {
     
     
 
-/******************************************************************/    
-/***** HEIGHT MEDIA QUERY STARTS HERE  ************************/
-/******************************************************************/
 
 /******************************************************************/    
 /***** DESKTOP MEDIA QUERY STARTS HERE  ************************/
@@ -244,10 +378,10 @@ footer {
         font-size: 8px;  
     }
 
-
-
-    
-    
-
-
 }
+
+/******************************************************************/    
+/***** HEIGHT MEDIA QUERY STARTS HERE  ************************/
+/******************************************************************/
+
+
