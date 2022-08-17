@@ -303,6 +303,8 @@ footer {
 #sidebar.close .logo-light {
      font-size: 3.6rem;
      margin-left: -.2rem;
+     transition: all 0.5s ease;
+
 }
 
 
@@ -314,6 +316,8 @@ footer {
 
 #sidebar.close #left-arrow {
     display: block;
+    transition: all 0.5s ease;
+
 }
 
 
@@ -331,11 +335,15 @@ footer {
     align-items: center;
     display: flex;
     margin: 0 auto;
+    transition: all 0.5s ease;
+
 }
  
 
 #sidebar.close nav {
     text-align: center;
+    transition: all 0.5s ease;
+
 }
  
 
@@ -344,7 +352,6 @@ footer {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    transition: all 0.5s ease;
 }
 
 
@@ -357,6 +364,8 @@ footer {
 
 #sidebar.close .profile-container {
     margin-bottom: 2rem;
+    transition: all 0.5s ease;
+
 }
 #sidebar.close .darkmode-container {
     margin: 0 auto;
