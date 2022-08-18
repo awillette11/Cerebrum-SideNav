@@ -17,7 +17,6 @@ body {
     font-weight: 300;
     background-color: var(--white); 
     color: var(--black);
-    transition: all 0.5s ease;
 }
 
 
@@ -77,7 +76,7 @@ h4 {
 
 .sidebar {
     position: relative;
-    padding: 3.8rem;
+    padding: 3.2rem;
     width: 28rem;
     height: 100vh;
     background-color: var(--snowWhite);
@@ -94,9 +93,8 @@ h4 {
     align-items: center;
     width: 24rem;
     height: auto;
-    margin-left: -1.8rem;
+    margin-left: -1.2rem;
     white-space: nowrap;
-    transition: all 0.5s ease;
 }
 
 
@@ -104,7 +102,6 @@ h4 {
     height: 3.6rem;
     width: auto;
     margin-right: 1.2rem; 
-    transition: all 0.5s ease;
 
 }
 
@@ -113,8 +110,6 @@ h4 {
     width: auto;
     margin-right: 1.2rem; 
     display: none;
-    transition: all 0.5s ease;
-
 }
 
 
@@ -127,7 +122,7 @@ h4 {
     cursor: pointer;
     border-radius: 50%;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
-    transition: all 0.5s ease;
+    z-index: 4; 
 }
 
 
@@ -146,7 +141,7 @@ h4 {
 
 
 .nav-link {
-    margin-bottom: 1.8rem;
+    margin-bottom: 2rem;
     position: relative;
     align-items: center;
     position: relative;
@@ -161,6 +156,7 @@ h4 {
     align-items: center;
 }
 
+
 .light {
     margin-right: 1.2rem;
     width: 2rem;
@@ -168,6 +164,7 @@ h4 {
     align-items: center;
     display: none;
 }
+
 
 .nav-link > a {
   display: flex;
@@ -180,8 +177,10 @@ h4 {
 .active::before {
     content: "";
     position: absolute;
-    top: -1rem;
-    left: -1.8rem;
+    top: -1.2rem;
+    left: 0%;
+    right: 0%;
+    margin-left: -1.2rem;
     width: 24rem;
     height: 4.4rem;
     align-items: center;
@@ -206,14 +205,13 @@ h4 {
 
 
 
-/**** SIDEBAR FOOTER HERE  ***************************************/
+/**** FOOTER HERE  ***************************************/
 
 footer {
     align-items: center;
     height: auto;
     position: absolute;
-    bottom: 0;
-    margin-bottom: 2rem;    
+    bottom: 2rem;
 }
 
 
@@ -224,15 +222,16 @@ footer {
     padding: 1.2rem;
     background-color: var(--black);
     border-radius: .8rem;
-    margin-left: -1.8rem;
+    margin-left: -1.2rem;
+    z-index: 4;
     transition: all 0.5s ease;
 }
 
 
 .profile-copy {
-   color: #fff;
+    color: #fff;
     line-height: 2rem;
-    margin-right: 2.4rem;
+    margin: 0 2.4rem 0 1.2rem;
     white-space: nowrap;
     transition: all 0.5s ease;
 }
@@ -241,25 +240,23 @@ footer {
 .avatar {
     height: 3.6rem;
     width: 3.6rem;
-    margin-right: 1.2rem;
 }
 
 
 .darkmode-container {
     display: flex;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1.6rem;
     cursor: pointer;
     transition: all 0.5s ease;
 }
 
 
-.darkmode-icon {
+.darkmode {
     height: 2.4rem;
     width: auto;
     margin-right: 1.2rem;   
     cursor: pointer;
-    transition: all 0.5s ease;
 }
 
 .lightmode {
@@ -267,7 +264,6 @@ footer {
     width: auto;
     margin-right: 1.2rem;   
     cursor: pointer;
-    transition: all 0.5s ease;
     display: none;
 }
 
@@ -295,7 +291,6 @@ footer {
     margin-left: 1.2rem;
     margin-right: 0;
     width: 100%;
-    transition: all 0.5s ease;
 }
  
 
@@ -303,29 +298,24 @@ footer {
 #sidebar.close .logo-light {
      font-size: 3.6rem;
      margin-left: -.2rem;
-     transition: all 0.5s ease;
-
 }
 
 
 #sidebar.close #right-arrow,
 #sidebar.close #left-arrow {
     right: -40%;
+    z-index: 4;
 }
 
 
-#sidebar.close #left-arrow {
+#sidebar.close #right-arrow {
     display: block;
-    transition: all 0.5s ease;
-
 }
 
 
-#sidebar.close #right-arrow,
-#sidebar.close .collapse, 
-#sidebar.close .profile-container > .nav-icon{
+#sidebar.close #left-arrow,
+#sidebar.close .collapse {
     display: none;
-    transition: all 0.5s ease;
 }
 
 #sidebar.close .nav-icon,
@@ -335,23 +325,29 @@ footer {
     align-items: center;
     display: flex;
     margin: 0 auto;
-    transition: all 0.5s ease;
-
 }
- 
+
+
+#sidebar.close .light {
+        display: none;   
+}
+
 
 #sidebar.close nav {
     text-align: center;
-    transition: all 0.5s ease;
-
 }
  
 
 #sidebar.close .subheader {
     transition: all 0.5s ease;
-    text-overflow: ellipsis;
-    overflow: hidden;
     white-space: nowrap;
+    font-size: 1.2rem;
+}
+
+
+#sidebar.close .bottom .subheader {
+    letter-spacing: 0;
+    width: auto;
 }
 
 
@@ -360,19 +356,38 @@ footer {
     width: 6.4rem;
     margin-left: -.4rem;
     transition: all 0.5s ease;
+
 }
+
 
 #sidebar.close .profile-container {
     margin-bottom: 2rem;
+    align-items: center;
     transition: all 0.5s ease;
 
 }
+
+
+#sidebar.close .avatar {
+    margin:auto;
+}
+
+
 #sidebar.close .darkmode-container {
     margin: 0 auto;
-   transition: all 0.5s ease;
+    transition: all 0.5s ease;
 
 }
 
+
+#sidebar.close .darkmode,
+#sidebar.close .lightmode {
+    width: auto;
+    height: 2.4rem;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+
+}
 
 /**** DARKMODE NAV HERE  ***************************************/
 
@@ -380,40 +395,34 @@ body.darkmode .collapse,
 body.darkmode .subheader,
 body.darkmode .logo-text  {
     color: var(--snowWhite);
-    transition: all 0.5s ease;
 }
 
 
 body.darkmode #sidebar {
     background-color: var(--blackityBlack);
-    transition: all 0.5s ease;
 }
 
 
 body.darkmode, 
 body.darkmode .active::before {
     background-color: var(--black);
-    transition: all 0.5s ease;
 }
-
 
 
 body.darkmode .lightmode, 
 body.darkmode .light,
-body.darkmode .logo-light {
+body.darkmode .logo-light,
+body.darkmode #sidebar .light {
     display: block;
-    transition: all 0.5s ease;
 }
 
 
 
-
 body.darkmode .nav-icon,
-body.darkmode .darkmode-icon,  
+body.darkmode .darkmode,  
 body.darkmode .logo-icon,
-#sidebar.close .nav-icon {
+body.darkmode #sidebar .nav-icon {
     display: none;
-    transition: all 0.5s ease;
 
 }
 
@@ -432,16 +441,16 @@ body.darkmode .logo-icon,
 
 
 
-@media only screen and (max-width: 1440px) {
+@media only screen and (max-height: 900px) {
 
     html {
         font-size: 8px;  
     }
 
+
+    
 }
 
 /******************************************************************/    
 /***** HEIGHT MEDIA QUERY STARTS HERE  ************************/
 /******************************************************************/
-
-
