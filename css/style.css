@@ -100,7 +100,7 @@ h4 {
 
 .logo-icon {
     height: 3.6rem;
-    width: 3.6rem;
+    width: auto;
     margin-right: 1.2rem; 
 
 }
@@ -123,8 +123,6 @@ h4 {
     border-radius: 50%;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
     z-index: 4; 
-    transition: all 0.5s ease;
-
 }
 
 
@@ -149,12 +147,10 @@ h4 {
     position: relative;
 }
 
-.nav-icon {
-    margin-right: 1.2rem;
-}
 
 .nav-icon,
-.logout {
+.profile-icon {
+    margin-right: 1.2rem;
     width: 2rem;
     height: 2rem;
     align-items: center;
@@ -187,9 +183,10 @@ h4 {
     margin-left: -1.2rem;
     width: 24rem;
     height: 4.4rem;
+    align-items: center;
+    justify-content: center;
     border-radius: .8rem;
     background-color: var(--white);
-    opacity: 70%;
     z-index: -1;
     transition: all 0.5s ease;
 }
@@ -197,7 +194,7 @@ h4 {
 
 .collapse {
     white-space: nowrap;
-    transition: opacity 0.5s 0.2s;
+    transition: all 0.5s ease;
 }
 
 
@@ -215,33 +212,28 @@ footer {
     height: auto;
     position: absolute;
     bottom: 2rem;
-    transition: all 0.5s ease;
-
 }
 
 
 .profile-container {
     display: flex;
     width: 24rem;
-    height: 7.2rem;
     align-items: center;
     padding: 1.2rem;
     background-color: var(--black);
     border-radius: .8rem;
-    margin: 0 0 1.6rem -1.2rem;
+    margin-left: -1.2rem;
     z-index: 4;
     transition: all 0.5s ease;
 }
 
 
 .profile-copy {
-    color: var(--snowWhite);
+    color: #fff;
     line-height: 2rem;
+    margin: 0 2.4rem 0 1.2rem;
     white-space: nowrap;
     transition: all 0.5s ease;
-    height: auto;
-    margin: 0 2rem 0 1.2rem;
-
 }
 
 
@@ -254,24 +246,27 @@ footer {
 .darkmode-container {
     display: flex;
     align-items: center;
+    margin-top: 1.6rem;
     cursor: pointer;
     transition: all 0.5s ease;
-    height: auto;
 }
 
 
-.darkmode,
-.lightmode {
+.darkmode {
     height: 2.4rem;
     width: auto;
     margin-right: 1.2rem;   
     cursor: pointer;
 }
 
-
 .lightmode {
+    height: 2.4rem;
+    width: auto;
+    margin-right: 1.2rem;   
+    cursor: pointer;
     display: none;
 }
+
 
 
 
@@ -280,7 +275,7 @@ footer {
 
 
 #sidebar.close {
-    padding: 3.2rem 1.6rem;
+    padding: 4rem 1.6rem;
     width: 8.8rem;
     z-index: 2;
     align-items: center;
@@ -296,14 +291,13 @@ footer {
     margin-left: 1.2rem;
     margin-right: 0;
     width: 100%;
-    transition: opacity 0.5s 0.2s;
 }
  
 
 #sidebar.close .logo-icon,
 #sidebar.close .logo-light {
+     font-size: 3.6rem;
      margin-left: -.2rem;
-     transition: opacity 0.5s 0.2s;
 }
 
 
@@ -311,15 +305,18 @@ footer {
 #sidebar.close #left-arrow {
     right: -40%;
     z-index: 4;
-    transition: opacity 0.5s 0.2s;
 }
 
 
 #sidebar.close #right-arrow {
     display: block;
-    transition: all 0.5s ease;
 }
 
+
+#sidebar.close #left-arrow,
+#sidebar.close .collapse {
+    display: none;
+}
 
 #sidebar.close .nav-icon,
 #sidebar.close .light {
@@ -328,21 +325,16 @@ footer {
     align-items: center;
     display: flex;
     margin: 0 auto;
-    transition: opacity 0.5s 0.2s;
 }
 
-#sidebar.close #left-arrow,
-#sidebar.close .collapse,
-#sidebar.close .light,
-#sidebar.close .logout {
-    display: none;
-    transition: opacity 0.5s 0.2s;
+
+#sidebar.close .light {
+        display: none;   
 }
 
 
 #sidebar.close nav {
     text-align: center;
-    transition: opacity 0.5s 0.2s;
 }
  
 
@@ -356,37 +348,35 @@ footer {
 #sidebar.close .bottom .subheader {
     letter-spacing: 0;
     width: auto;
-    transition: opacity 0.5s 0.2s;
 }
 
 
-
+#sidebar.close .profile-container,
 #sidebar.close .active::before {
-    width: 6rem;
-    margin-left: -.2rem;
+    width: 6.4rem;
+    margin-left: -.4rem;
     transition: all 0.5s ease;
+
 }
 
 
 #sidebar.close .profile-container {
-    width: 6rem;
-    height: 7.2rem;
-    margin-bottom: 1.6rem;
-    margin-left: -.2rem;
+    margin-bottom: 2rem;
     align-items: center;
     transition: all 0.5s ease;
+
 }
 
 
 #sidebar.close .avatar {
-    margin: auto;
-    transition: opacity 0.5s 0.2s;
+    margin:auto;
 }
 
 
 #sidebar.close .darkmode-container {
     margin: 0 auto;
     transition: all 0.5s ease;
+
 }
 
 
@@ -396,11 +386,8 @@ footer {
     height: 2.4rem;
     margin: 0 auto;
     transition: all 0.5s ease;
+
 }
-
-
-
-
 
 /**** DARKMODE NAV HERE  ***************************************/
 
@@ -436,6 +423,7 @@ body.darkmode .darkmode,
 body.darkmode .logo-icon,
 body.darkmode #sidebar .nav-icon {
     display: none;
+
 }
 
 
@@ -453,16 +441,16 @@ body.darkmode #sidebar .nav-icon {
 
 
 
-@media (max-height:900px) {
+@media only screen and (max-height: 900px) {
 
     html {
         font-size: 8px;  
     }
 
 
-    #sidebar {
-        min-height: 90rem;
-    }
-  
+    
 }
 
+/******************************************************************/    
+/***** HEIGHT MEDIA QUERY STARTS HERE  ************************/
+/******************************************************************/
