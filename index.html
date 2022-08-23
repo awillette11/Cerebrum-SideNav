@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar UI</title>
+
+
+   <!-- Reset CSS -->
+   <link rel="stylesheet" href="vendor/reset.css">
+
+
+   <!-- CSS -->
+   <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+   <!-- Google Fonts - Poppins -->
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+   <!-- Google Fonts - Noto Serif -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  
+   <!-- jQuery -->
+   <script src="vendor/jquery.js"></script>
+   <script src="jquery/app.js"></script>
+
+
+</head>
+
+
+<body>
+    
+
+<div class="sidebar" id="sidebar">
+
+<!-- SIDEBAR HEADER ------------------------------------------>
+
+    <div class="sidebar-header">
+
+        <img src="icons/logo-black.svg" class="logo-icon" alt="">
+        <img src="icons/logo-white.svg" class="logo-light" alt="">
+        <div class="logo-text collapse">
+            <p class="logo-text">Cerebrum</p>
+            <h3 class="slogan">Health is Wealth</h3>
+        </div>
+        <img src="icons/right-arrow.svg" alt="" id="right-arrow">
+        <img src="icons/left-arrow.svg" alt="" id="left-arrow">
+  
+    </div>
+
+
+<!-- MAIN NAV -------------------------------------------------->
+<div class="scroll">
+
+
+    <nav class="top">
+
+        <h3 class="subheader">MENU</h3>
+
+        <ul class="nav-items">
+
+            <li class="nav-link active">
+                <a href="#">
+                    <img src="icons/puzzle.svg" alt="" class="nav-icon">
+                    <img src="icons/puzzleLight.svg" alt="" class="light">
+                    <h2 class="collapse">Activity</h2>
+                </a>
+            </li>
+
+            <li class="nav-link">
+                <a href="#">
+                    <img src="icons/pulse.svg" alt="" class="nav-icon">
+                    <img src="icons/pulseLight.svg" alt="" class="light">
+                    <h2 class="collapse">Performance</h2>
+                </a>
+            </li>
+
+            <li class="nav-link">
+                <a href="#">
+                    <img src="icons/calendar.svg" alt="" class="nav-icon">
+                    <img src="icons/calendarLight.svg" alt="" class="light">
+                    <h2 class="collapse">Schedule</h2>
+                </a>
+            </li>
+
+            <li class="nav-link">
+                <a href="#">
+                    <img src="icons/stethoscope.svg" alt="" class="nav-icon">
+                    <img src="icons/stethoscopeLight.svg" alt="" class="light">
+                    <h2 class="collapse">Providers</h2>
+                </a>
+            </li>
+
+            <li class="nav-link">
+                <a href="#">
+                    <img src="icons/journal.svg" alt="" class="nav-icon">
+                    <img src="icons/journalLight.svg" alt="" class="light">
+                    <h2 class="collapse">Journal</h2>
+                </a>
+            </li>
+
+            <li class="nav-link">
+                <a href="#">
+                    <img src="icons/medicine-bottle.svg" alt="" class="nav-icon">
+                    <img src="icons/medicine-bottleLight.svg" alt="" class="light">
+                    <h2 class="collapse">Supplement</h2>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+
+<!-- SECONDARY NAV ---------------------------------------------->
+
+    <nav class="bottom">
+        <h3 class="subheader">ACCOUNT</h3>
+
+        <ul class="nav-items">
+
+            <li class="nav-link">
+                <a href="#">
+                    <img src="icons/credit-card.svg" alt="" class="nav-icon">
+                    <img src="icons/credit-cardLight.svg" alt="" class="light">
+                    <h2 class="collapse">Billing</h2>
+                </a>
+            </li>
+
+            <li class="nav-link">
+                <a href="#">
+                    <img src="icons/insurance.svg" alt="" class="nav-icon">
+                    <img src="icons/insuranceLight.svg" alt="" class="light">
+                    <h2 class="collapse">Insurance</h2>
+                </a>
+            </li>
+
+            <li class="nav-link">
+                <a href="#">
+                    <img src="icons/chat.svg" alt="" class="nav-icon">
+                    <img src="icons/chatLight.svg" alt="" class="light">
+                    <h2 class="collapse">Chat</h2>
+                </a>
+            </li>
+
+            <li class="nav-link">
+                <a href="#">
+                    <img src="icons/help.svg" alt="" class="nav-icon">
+                    <img src="icons/helpLight.svg" alt="" class="light">
+                    <h2 class="collapse">Support</h2>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+
+
+<!-- Profile ----------------------------------------------------->
+
+
+    <footer>
+        <div class="profile-container">
+
+            <img src="icons/avatar.png" alt="" class="avatar">
+            <div class="profile-copy collapse">
+                <h3 class="name"> Kevin Mhoon</h3>
+                <h4 class="email">kmhoon@gmail.com</h4>
+            </div>
+            <img src="icons/logout.svg" alt="" class="logout">
+
+        </div>
+
+        
+        <div class="darkmode-container">
+            <img src="icons/lightmode-toggle.svg" alt="" class="darkmode">
+            <img src="icons/darkmode-toggle.svg" alt="" class="lightmode">
+
+            <h2 class="collapse">Dark Mode</h2>
+        </div>
+
+    </footer>
+
+ </div> <!-- Scroll ends ----->
+
+
+
+</div> <!-- Sidebar ends ----->
+
+
+
+
+</body>
+</html>
