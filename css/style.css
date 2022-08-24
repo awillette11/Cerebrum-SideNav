@@ -407,17 +407,17 @@ body.darkmode .logo-text  {
     color: var(--snowWhite);
 }
 
-
 body.darkmode #sidebar {
     background-color: var(--blackityBlack);
 }
 
+body.darkmode {
+    background-color: var(--darkGray);
+}
 
-body.darkmode, 
 body.darkmode .active::before {
     background-color: var(--black);
 }
-
 
 body.darkmode .lightmode, 
 body.darkmode .light,
@@ -425,8 +425,6 @@ body.darkmode .logo-light,
 body.darkmode #sidebar .light {
     display: block;
 }
-
-
 
 body.darkmode .nav-icon,
 body.darkmode .darkmode,  
@@ -439,7 +437,7 @@ body.darkmode #sidebar .nav-icon {
 
 
 /******************************************************************/    
-/***** DESKTOP MEDIA QUERY STARTS HERE  ************************/
+/***** HEIGHT MEDIA QUERY STARTS HERE  ************************/
 /******************************************************************/    
 
 
